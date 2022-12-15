@@ -1,0 +1,20 @@
+server:
+  port: 4040
+spring:
+  cache:
+    redis:
+      cache-null-values: true
+      time-to-live: 60000
+    type: redis
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ram
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      format_sql: true
+    show-sql: true
